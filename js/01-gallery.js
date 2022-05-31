@@ -13,6 +13,7 @@ function createPicMarkup (images){
     return images.map(({preview, original, description}) => {
         return `
         <div class="gallery__item">
+        
         <a class="gallery__link" href="#">
           <img
             class="gallery__image"
@@ -21,6 +22,7 @@ function createPicMarkup (images){
             alt="${description}"
           />
         </a>
+        
       </div>`;
     }).join('');
 
