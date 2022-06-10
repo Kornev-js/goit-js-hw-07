@@ -13,7 +13,7 @@ function createPicMarkup (images){
     
     return images.map(({preview, original, description}) => {
         return `
-        <li>
+        <li class="gallyry__list">
         <a class="gallery__item" href="${original}">
         <img class="gallery__image" src="${preview}" alt="${description}" />
         </a>
@@ -23,11 +23,8 @@ function createPicMarkup (images){
 }
 
 let lightbox = new SimpleLightbox('.gallery a', { 
-    close: true,
-    showCounter: true,
-    animationSlide: false,
-    fadeSpeed: false,
     
-    captionsData: "alt",
+    
+    captionsData: 'alt',
     captionDelay: 250,
  });
